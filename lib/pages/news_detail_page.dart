@@ -23,6 +23,14 @@ class NewsDetailPage extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image(
+                image: AssetImage(currentNew.imagePath),
+                fit: BoxFit.cover,
+              ),
+            ),
+            const SizedBox(height: 10),
             Text(
               currentNew.title,
               style: titleTextStyle.copyWith(fontSize: 25),
